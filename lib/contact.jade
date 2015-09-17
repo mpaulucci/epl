@@ -1,0 +1,48 @@
+extends partials/layout.jade
+
+block js
+  script(type='text/javascript', src='http://maps.google.com/maps/api/js?sensor=true')
+  script(type='text/javascript', src='assets/plugins/gmap/gmap.js')
+  script(type='text/javascript', src='js/maps.js')
+
+block content
+  // === Content Part ===
+  .container.content
+    .row.margin-bottom-60
+      .col-md-6.col-sm-6
+        // Google Map
+        #map.height-450
+        // End Google Map
+      .col-md-6.col-sm-6
+        // Get in Touch
+        h3 Contáctenos
+        p
+          | Llámenos por teléfono o envíenos su consulta por email, y nos pondremos en contacto con Ud. a la brevedad.
+        hr
+        // Contacts
+        h3 Nuestras Oficinas
+        ul.list-unstyled.who
+          li
+            a(href='#')
+              i.fa.fa-home
+              | Tacuarí 131 6ªL, Ciudad Autónoma de Buenos Aires
+          li
+            a(href='#')
+              i.fa.fa-envelope
+              | consultas@epl.com.ar
+          li
+            a(href='#')
+              i.fa.fa-phone
+              | (+54 11) 5272-1159
+        hr
+        // Business Hours
+        h3 Horarios de Atención
+        ul.list-unstyled
+          li
+            strong Lunes-Viernes:
+            |  10am to 8pm
+          li
+            strong Sábado-Domingo:
+            |  Cerrado
+  // /container
+  // === End Content Part ===

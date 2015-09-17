@@ -1,0 +1,42 @@
+.header
+  .container
+    // Logo
+    a.logo(href='index.html')
+      img(src='img/logo_small.jpg', alt='Logo')
+    // End Logo
+    // Topbar
+    .topbar
+      ul.loginbar.pull-right
+        li.hoverSelector
+          i.fa.fa-globe
+          a Languages
+          ul.languages.hoverSelectorBlock
+            li.active
+              a(href='#')
+                | Español 
+                i.fa.fa-check
+            li
+              a(href='#') English
+            li
+              a(href='#') Deutsch
+    // End Topbar
+    // Toggle get grouped for better mobile display
+    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+      span.sr-only Toggle navigation
+      span.fa.fa-bars
+    // End Toggle
+  // /end container
+  // Collect the nav links, forms, and other content for toggling
+  .collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
+    .container
+      ul.nav.navbar-nav
+        li.active
+          a(href='index.html') Home
+        li
+          a(href='firm.html') El Estudio
+        li
+          a(href='services.html') Nuestros Servicios
+        li
+          a(href='contact.html') Contacto
+
+

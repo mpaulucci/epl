@@ -1,0 +1,83 @@
+doctype html
+//if IE 8
+  html.ie8(lang='es')  
+//if IE 9
+  html.ie9(lang='es')  
+// [if !IE] <!
+html(lang='es')
+  // <![endif]
+  head
+    title EPL - Estudio Paulucci Lahusen
+
+    // Meta
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(content='', name='description')
+    meta(content='', name='author')
+
+    // Favicon
+    link(rel='shortcut icon', href='favicon.ico')
+
+    // Web Fonts
+    link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=cyrillic,latin')
+
+    // CSS Global Compulsory
+    link(rel='stylesheet', href='assets/plugins/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='assets/css/style.css')
+
+    // CSS Header and Footer
+    link(rel='stylesheet', href='assets/css/headers/header-default.css')
+    link(rel='stylesheet', href='assets/css/footers/footer-v1.css')
+
+    // CSS Implementing Plugins
+    link(rel='stylesheet', href='assets/plugins/animate.css')
+    link(rel='stylesheet', href='assets/plugins/line-icons/line-icons.css')
+    link(rel='stylesheet', href='assets/plugins/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='assets/plugins/fancybox/source/jquery.fancybox.css')
+    link(rel='stylesheet', href='assets/plugins/owl-carousel/owl-carousel/owl.carousel.css')
+    link(rel='stylesheet', href='assets/plugins/revolution-slider/rs-plugin/css/settings.css', type='text/css', media='screen')
+
+    // CSS Theme
+    link(rel='stylesheet', href='assets/css/theme-colors/blue.css')
+
+    //if lt IE 9
+    link(rel='stylesheet', href='assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css', type='text/css', media='screen')
+    // CSS Customization
+    link(rel='stylesheet', href='js/active.js')
+  body
+    .wrapper
+      include ./header.jade
+      block content
+      include ./footer.jade
+
+    // JS Global Compulsory
+    script(type='text/javascript', src='assets/plugins/jquery/jquery.min.js')
+    script(type='text/javascript', src='assets/plugins/jquery/jquery-migrate.min.js')
+    script(type='text/javascript', src='assets/plugins/bootstrap/js/bootstrap.min.js')
+    // JS Implementing Plugins
+    script(type='text/javascript', src='assets/plugins/back-to-top.js')
+    script(type='text/javascript', src='assets/plugins/smoothScroll.js')
+    script(type='text/javascript', src='assets/plugins/jquery.parallax.js')
+    script(type='text/javascript', src='assets/plugins/fancybox/source/jquery.fancybox.pack.js')
+    script(type='text/javascript', src='assets/plugins/owl-carousel/owl-carousel/owl.carousel.js')
+    script(type='text/javascript', src='assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js')
+    script(type='text/javascript', src='assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js')
+    // JS Customization
+    script(type='text/javascript', src='assets/js/custom.js')
+    // JS Page Level
+    script(type='text/javascript', src='assets/js/app.js')
+    script(type='text/javascript', src='assets/js/plugins/fancy-box.js')
+    script(type='text/javascript', src='assets/js/plugins/owl-carousel.js')
+    script(type='text/javascript', src='assets/js/plugins/revolution-slider.js')
+
+    block js
+
+    script(type='text/javascript').
+      jQuery(document).ready(function() {
+      App.init();
+      App.initParallaxBg();
+      FancyBox.initFancybox();
+      OwlCarousel.initOwlCarousel();
+      RevolutionSlider.initRSfullScreenOffset();
+      });
+
