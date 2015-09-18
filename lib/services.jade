@@ -1,4 +1,184 @@
 extends partials/layout.jade
 
+block css
+  style(type='text/css').
+    ul {
+      margin-bottom: 0px;
+    }
+
+    li {
+      padding: 5px 0;
+    }
+
 block content
-  h1 Nuestros Servicios
+  .container.content
+    .row
+      .col-md-12
+        h2.title-v2.title-center SERVICIOS
+    .row
+      .col-md-12
+        .headline
+          h2 Contables y Administrativos
+        .row.main-check.margin-bottom-30
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Organización del área contable de todo tipo de empresas
+              li
+                i.fa.fa-check.color-green  
+                span  Desarrollo de planes de cuentas contables
+              li
+                i.fa.fa-check.color-green  
+                span  Registro de operaciones, análisis y conciliación de cuentas contables, elaboración de balances de saldos
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Asistencia al sector administrativo
+              li
+                i.fa.fa-check.color-green  
+                span  Certificaciones contables en general
+              li
+                i.fa.fa-check.color-green  
+                span  Confección de estados contables, armado de estados comparativos, presupuestos financieros y de costos
+    .row
+      .col-md-12
+        .headline
+          h2 Impositivos
+        .row.main-check.margin-bottom-30
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Planificación tributaria local, en base a la normativa vigente y posibles cambios futuros. Análisis de efectos impositivos por decisiones de inversión y financiamiento.
+              li
+                i.fa.fa-check.color-green  
+                span  Asesoramiento en materia de tributos nacionales, provinciales y municipales, informes en materia fiscal.
+              li
+                i.fa.fa-check.color-green  
+                span  Liquidación y confección de declaraciones juradas para personas físicas y jurídicas.
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Asistencia en oportunidad de inspecciones de los distintos organismos de fiscalización.
+              li
+                i.fa.fa-check.color-green  
+                span  Defensa ante procedimientos administrativos y judiciales llevados a cabo por las autoridades estatales.
+              li
+                i.fa.fa-check.color-green  
+                span  Asesoramiento impositivo en general: ley penal tributaria, planes de facilidades de pago, régimen de facturación y registro, controladores fiscales, régimen de retenciones.
+
+    .row
+      .col-md-12
+        .headline
+          h2 Laborales y seguridad social
+        .row.main-check.margin-bottom-30
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Diseño de políticas en materia laboral, contratos laborales, modalidades promovidas.
+              li
+                i.fa.fa-check.color-green  
+                span  Liquidación y confección de recibos de sueldos y jornales para personal en relación de dependencia.
+              li
+                i.fa.fa-check.color-green  
+                span  Liquidación y declaración de cargas sociales ante los organismos de previsión social, sindicatos, obras sociales y aseguradoras por riesgos laborales.
+
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Atención a inspecciones de organismos provisionales y de Policía de trabajo.
+              li
+                i.fa.fa-check.color-green  
+                span  Administración de legajos del personal.
+              li
+                i.fa.fa-check.color-green  
+                span  Liquidaciones impositivas de cuarta categoría del impuesto a las ganancias.
+              li
+                i.fa.fa-check.color-green  
+                span  Asesoramiento en materia laboral. Indemnizaciones, telegramas, beneficios sociales, planes de facilidades de pago, reégimen de asignaciones familiares.
+
+
+    .row
+      .col-md-12
+        .headline
+          h2 Auditorías y Balances
+        .row.main-check.margin-bottom-30
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Auditoría previa y final sobre estados contables con emisión de dictamen profesional. Carta de recomendaciones al cliente
+              li
+                i.fa.fa-check.color-green  
+                span  Revisiones limitadas
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Análisis económico y financiero de los estados contables. Liquidez y solvencia, rentabilidad
+              li
+                i.fa.fa-check.color-green  
+                span  Auditorías de Consorcios.
+              li
+                i.fa.fa-check.color-green  
+                span  Evaluación y diseño de control interno
+
+    .row
+      .col-md-12
+        .headline
+          h2 Nuevos emprendimientos
+        .row.main-check.margin-bottom-30
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Análisis de factibilidad de emprendimientos
+              li
+                i.fa.fa-check.color-green  
+                span  Inscripción de sociedades, diseño de estatutos
+
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Inscripciones impositivas, adecuacón a normas tributarias.
+              li
+                i.fa.fa-check.color-green  
+                span  Asistencia en el diseño del área administrativa. Encuadre de los contratos laborales.
+
+    .row
+      .col-md-12
+        .headline
+          h2 Otros servicios
+        .row.main-check.margin-bottom-30
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Contabilidad de costos. Márgenes por productos. Costo para toma de decisiones.
+              li
+                i.fa.fa-check.color-green  
+                span  Precios de Transferencia según la normativa del impuesto a las ganancias.
+              li
+                i.fa.fa-check.color-green  
+                span  Consultoría técnica en procesos judiciales. Asistencia en Conciliaciones judiciales.
+              li
+                i.fa.fa-check.color-green  
+                span  Presupuestos económicos y financieros.
+          .col-md-6
+            ul.list-unstyled.check-style
+              li
+                i.fa.fa-check.color-green  
+                span  Mandatos y representaciones. Domicilio legal
+              li
+                i.fa.fa-check.color-green  
+                span  Custodia de títulos, acciones.
+              li
+                i.fa.fa-check.color-green  
+                span  Reestructuración de empresas. Escisión, fusión y liquidación.  
+ 
