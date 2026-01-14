@@ -25,3 +25,6 @@ Open any HTML file directly in the browser. No build required.
 
 ## Deploy (GitHub Pages)
 Repo root is the site root. Pages setting should point to `main / (root)`.
+
+## Hosting note (for agents)
+Site is hosted on GitHub Pages.
