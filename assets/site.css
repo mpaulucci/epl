@@ -130,6 +130,16 @@ body {
   font-weight: 600;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid rgba(201, 138, 74, 0.9);
+  outline-offset: 3px;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
