@@ -79,17 +79,34 @@
         <a href="index.html" class="flex items-center gap-3">
           <img src="assets/logo.png" alt="Estudio Paulucci Lahusen" class="h-12 w-auto" />
 </a>
-        <nav class="flex flex-wrap items-center gap-5 text-sm font-semibold">
+        <button
+          class="inline-flex items-center justify-center rounded-full border border-ink/15 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink/70 md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          Menu
+        </button>
+        <nav id="site-menu" class="hidden w-full flex-col gap-4 pt-2 text-sm font-semibold md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:pt-0" data-mobile-menu>
           <a href="el-estudio.html" class="nav-link">El Estudio</a>
           <a href="servicios.html" class="nav-link">Servicios</a>
           <a href="iniciando-negocios.html" class="nav-link is-active">Iniciando Negocios</a>
           <a href="contacto.html" class="nav-link">Contacto</a>
+          <a
+            href="https://wa.me/541144252924?text=Hola%2C%20quiero%20orientacion%20para%20iniciar%20mi%20negocio."
+            target="_blank"
+            rel="noopener"
+            class="cta-primary md:hidden"
+          >
+            WhatsApp
+          </a>
         </nav>
         <a
           href="https://wa.me/541144252924?text=Hola%2C%20quiero%20orientacion%20para%20iniciar%20mi%20negocio."
           target="_blank"
           rel="noopener"
-          class="cta-primary"
+          class="cta-primary hidden md:inline-flex"
         >
           WhatsApp
         </a>
@@ -163,5 +180,23 @@
         <p>WhatsApp: +54 11 4425-2924</p>
       </div>
     </footer>
+    <script>
+      const navToggle = document.querySelector("[data-nav-toggle]");
+      const mobileMenu = document.querySelector("[data-mobile-menu]");
+      if (navToggle && mobileMenu) {
+        navToggle.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.toggle("hidden");
+          navToggle.setAttribute("aria-expanded", (!isHidden).toString());
+        });
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.matchMedia("(max-width: 767px)").matches) {
+              mobileMenu.classList.add("hidden");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
+    </script>
   </body>
 </html>
