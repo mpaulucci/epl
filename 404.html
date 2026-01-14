@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pagina no encontrada | Estudio Paulucci Lahusen</title>
+    <meta name="description" content="No encontramos la pagina que buscas. Volve al inicio o contactanos para ayudarte." />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0b0d12",
+              sand: "#f5f2ed",
+              jade: "#0f5b5a",
+              copper: "#c98a4a",
+              mist: "#dfe7e2",
+              night: "#12161d",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body class="bg-noise">
+    <header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Estudio Paulucci Lahusen" class="h-12 w-auto" />
+        </a>
+        <button
+          class="inline-flex items-center justify-center rounded-full border border-ink/15 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink/70 md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          data-nav-toggle
+        >
+          Menu
+        </button>
+        <nav id="site-menu" class="hidden w-full flex-col gap-4 pt-2 text-sm font-semibold md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:pt-0" data-mobile-menu>
+          <a href="el-estudio.html" class="nav-link">El Estudio</a>
+          <a href="servicios.html" class="nav-link">Servicios</a>
+          <a href="iniciando-negocios.html" class="nav-link">Iniciando Negocios</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+          <a
+            href="https://wa.me/541144252924?text=Hola%20Estudio%20Paulucci%20Lahusen%2C%20quiero%20hacer%20una%20consulta."
+            target="_blank"
+            rel="noopener"
+            class="cta-primary md:hidden"
+          >
+            WhatsApp
+          </a>
+        </nav>
+        <a
+          href="https://wa.me/541144252924?text=Hola%20Estudio%20Paulucci%20Lahusen%2C%20quiero%20hacer%20una%20consulta."
+          target="_blank"
+          rel="noopener"
+          class="cta-primary hidden md:inline-flex"
+        >
+          WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="bg-hero">
+        <div class="mx-auto w-full max-w-6xl px-6 py-20">
+          <p class="section-kicker reveal">Error 404</p>
+          <h1 class="mt-4 font-display text-4xl font-semibold reveal delay-1">No encontramos esta pagina.</h1>
+          <p class="mt-6 max-w-2xl text-lg text-ink/75 reveal delay-2">
+            La pagina que buscas no esta disponible. Podes volver al inicio o escribirnos para guiarte.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4 reveal delay-3">
+            <a href="index.html" class="cta-primary">Volver al inicio</a>
+            <a href="contacto.html" class="cta-ghost">Ir a Contacto</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto w-full max-w-6xl px-6 pb-16">
+        <div class="glass rounded-3xl p-10">
+          <h2 class="font-display text-2xl">Atajo rapido</h2>
+          <p class="mt-4 text-sm text-ink/70">Si necesitas ayuda inmediata, escribinos por WhatsApp.</p>
+          <a
+            href="https://wa.me/541144252924?text=Hola%20Estudio%20Paulucci%20Lahusen%2C%20necesito%20ayuda%20para%20ubicar%20una%20seccion."
+            target="_blank"
+            rel="noopener"
+            class="mt-6 inline-flex rounded-full bg-copper px-6 py-3 text-sm font-semibold text-night"
+          >
+            Escribir por WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-ink/10 bg-sand">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-ink/70 md:flex-row md:items-center md:justify-between">
+        <p>Copyright © 2026 Estudio Paulucci Lahusen - Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script>
+      const navToggle = document.querySelector("[data-nav-toggle]");
+      const mobileMenu = document.querySelector("[data-mobile-menu]");
+      if (navToggle && mobileMenu) {
+        navToggle.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.toggle("hidden");
+          navToggle.setAttribute("aria-expanded", (!isHidden).toString());
+        });
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.matchMedia("(max-width: 767px)").matches) {
+              mobileMenu.classList.add("hidden");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
